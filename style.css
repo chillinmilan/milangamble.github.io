@@ -1,0 +1,45 @@
+/* Basic reset and full-page layout */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevents scrollbars */
+}
+
+/* Container for the background image */
+.background-container {
+    position: fixed; /* Keeps the background in place when scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('your-background-image.jpg');
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    z-index: -1; /* Places the background behind other content */
+}
+
+/* Overlay for your text content */
+.content-overlay {
+    position: relative; /* Allows for positioning of child elements */
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center; /* Vertically centers the content */
+    color: white; /* Sets text color for contrast */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4); /* Optional: Adds a dark overlay for better text readability */
+}
+
+/* Styling for the text content */
+.text-content h1 {
+    font-size: 4rem; /* Adjust size as needed */
+    margin-bottom: 0.5rem;
+}
+
+.text-content p {
+    font-size: 1.5rem; /* Adjust size as needed */
+    margin: 0.5rem 0;
+}
