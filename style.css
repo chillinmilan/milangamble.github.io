@@ -1,0 +1,113 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.bg {
+  position: fixed;
+  inset: -40px;
+  background: url('P1040274.jpg') center center / cover no-repeat;
+  z-index: 0;
+  will-change: transform;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 20, 35, 0.42);
+  z-index: 2;
+}
+
+/* Name nearly sitting on the horizon */
+.name-block {
+  position: fixed;
+  z-index: 3;
+  top: 22vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: calc(100vw - 6rem);
+  text-align: left;
+}
+
+h1 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: clamp(3.8rem, 10vw, 7rem);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  white-space: nowrap;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Details centered as a block, content left-justified within */
+.detail-block {
+  position: fixed;
+  z-index: 3;
+  top: 42vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: calc(100vw - 6rem);
+}
+
+.divider {
+  width: 40px;
+  height: 1px;
+  background: rgba(200, 220, 235, 0.4);
+  margin-bottom: 2rem;
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 2.8rem;
+}
+
+.bio p {
+  font-family: 'Geist', 'Helvetica Neue', Arial, sans-serif;
+  font-size: clamp(1.1rem, 2.2vw, 1.45rem);
+  font-weight: 300;
+  color: #ffffff;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+}
+
+.bio strong {
+  font-weight: 700;
+  font-size: 1.15em;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.linkedin-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  border: 1px solid rgba(200, 220, 235, 0.5);
+  border-radius: 50%;
+  color: #d0e4f0;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background 0.25s, border-color 0.25s, color 0.25s;
+}
+
+.linkedin-btn:hover {
+  background: rgba(200, 220, 235, 0.15);
+  border-color: rgba(200, 220, 235, 0.8);
+  color: #ffffff;
+}
