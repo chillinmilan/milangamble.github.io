@@ -40,6 +40,12 @@
       targetY = (e.clientY / window.innerHeight) - 0.5;
     });
 
+    document.addEventListener('touchmove', (e) => {
+      const t = e.touches[0];
+      targetX = (t.clientX / window.innerWidth) - 0.5;
+      targetY = (t.clientY / window.innerHeight) - 0.5;
+    }, { passive: true });
+
     function animate() {
       curX += (targetX - curX) * 0.06;
       curY += (targetY - curY) * 0.06;

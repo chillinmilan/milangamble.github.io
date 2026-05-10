@@ -5,7 +5,7 @@
 }
 
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   overflow: hidden;
 }
 
@@ -57,13 +57,6 @@ h1 {
   max-width: calc(100vw - 6rem);
 }
 
-.divider {
-  width: 40px;
-  height: 1px;
-  background: rgba(200, 220, 235, 0.4);
-  margin-bottom: 2rem;
-}
-
 .bio {
   display: flex;
   flex-direction: column;
@@ -110,4 +103,67 @@ h1 {
   background: rgba(200, 220, 235, 0.15);
   border-color: rgba(200, 220, 235, 0.8);
   color: #ffffff;
+}
+
+/* ── Tablet ── */
+@media (max-width: 1024px) {
+  .name-block {
+    top: 20vh;
+    max-width: calc(100vw - 4rem);
+  }
+
+  h1 {
+    font-size: clamp(3rem, 9vw, 5rem);
+    white-space: normal;
+  }
+
+  .detail-block {
+    top: 40vh;
+    max-width: calc(100vw - 4rem);
+  }
+
+  .bio p {
+    font-size: clamp(1rem, 2.4vw, 1.3rem);
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  body {
+    overflow-y: auto;
+  }
+
+  .bg {
+    position: fixed;
+  }
+
+  .name-block {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: auto;
+    max-width: 100%;
+    padding: 28vh 1.5rem 0;
+    text-align: left;
+  }
+
+  h1 {
+    font-size: clamp(2.8rem, 13vw, 4rem);
+    white-space: normal;
+  }
+
+  .detail-block {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: auto;
+    max-width: 100%;
+    padding: 4vh 1.5rem 3rem;
+  }
+
+  .bio p {
+    font-size: 1.1rem;
+  }
 }
