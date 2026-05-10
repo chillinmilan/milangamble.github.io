@@ -133,6 +133,10 @@ h1 {
     overflow: hidden;
   }
 
+  .bg {
+    background-position: center 25%;
+  }
+
   .name-block {
     position: fixed;
     top: 50%;
@@ -172,6 +176,7 @@ h1 {
 
   .bg {
     position: fixed;
+    background-position: center 25%;
   }
 
   .name-block {
