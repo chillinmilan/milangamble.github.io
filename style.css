@@ -170,8 +170,10 @@ h1 {
 /* ── Mobile portrait ── */
 @media (max-width: 768px) {
   body {
-    overflow-y: auto;
-    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    overflow: hidden;
   }
 
   .bg {
@@ -180,14 +182,15 @@ h1 {
   }
 
   .name-block {
-    position: fixed;
-    top: 18vh;
-    left: 1.5rem;
-    right: 1.5rem;
-    width: auto;
-    max-width: calc(100% - 3rem);
+    position: relative;
+    top: auto;
+    left: auto;
     transform: none;
+    width: auto;
+    max-width: 100%;
+    padding: 18vh 1.5rem 0;
     text-align: left;
+    flex-shrink: 0;
   }
 
   h1 {
@@ -197,14 +200,14 @@ h1 {
   }
 
   .detail-block {
-    position: fixed;
+    position: relative;
     top: auto;
-    bottom: 3rem;
-    left: 1.5rem;
-    right: 1.5rem;
-    width: auto;
-    max-width: calc(100% - 3rem);
+    left: auto;
     transform: none;
+    width: auto;
+    max-width: 100%;
+    padding: 0 1.5rem 3rem;
+    margin-top: auto;
   }
 
   .bio p {
