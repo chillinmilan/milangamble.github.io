@@ -180,13 +180,13 @@ h1 {
   }
 
   .name-block {
-    position: relative;
-    top: auto;
-    left: auto;
+    position: fixed;
+    top: 18vh;
+    left: 1.5rem;
+    right: 1.5rem;
+    width: auto;
+    max-width: calc(100% - 3rem);
     transform: none;
-    width: 100%;
-    max-width: 100%;
-    padding: 25vh 1.5rem 0;
     text-align: left;
   }
 
@@ -197,16 +197,21 @@ h1 {
   }
 
   .detail-block {
-    position: relative;
+    position: fixed;
     top: auto;
-    left: auto;
+    bottom: 3rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    width: auto;
+    max-width: calc(100% - 3rem);
     transform: none;
-    width: 100%;
-    max-width: 100%;
-    padding: 4vh 1.5rem 3rem;
   }
 
   .bio p {
     font-size: 1.05rem;
+  }
+
+  .bio {
+    margin-bottom: 1.5rem;
   }
 }
