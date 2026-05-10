@@ -127,7 +127,43 @@ h1 {
   }
 }
 
-/* ── Mobile ── */
+/* ── Mobile landscape: side-by-side layout ── */
+@media (max-width: 900px) and (orientation: landscape) {
+  body {
+    overflow: hidden;
+  }
+
+  .name-block {
+    position: fixed;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    width: 44%;
+    max-width: 44%;
+    text-align: left;
+  }
+
+  h1 {
+    font-size: clamp(1.8rem, 6vw, 3rem);
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .detail-block {
+    position: fixed;
+    top: 50%;
+    left: 52%;
+    transform: translateY(-50%);
+    width: 43%;
+    max-width: 43%;
+  }
+
+  .bio p {
+    font-size: clamp(0.8rem, 1.8vw, 1rem);
+  }
+}
+
+/* ── Mobile portrait ── */
 @media (max-width: 768px) {
   body {
     overflow-y: auto;
